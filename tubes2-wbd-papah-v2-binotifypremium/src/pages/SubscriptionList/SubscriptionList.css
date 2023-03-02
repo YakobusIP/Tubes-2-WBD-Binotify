@@ -1,0 +1,34 @@
+.content {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.row-table {
+    transition: 100ms ease;
+}
+
+.row-table:hover {
+    background-color: var(--main-black-1);
+}
+
+.action-btn {
+    cursor: pointer;
+    transition: 250ms ease;
+}
+
+.action-btn:hover {
+    color: black;
+    width: 50%;
+}
+
+.accepted-info {
+    color: var(--main-green);
+    border: 2px solid var(--main-green); 
+}
+
+.rejected-info {
+    color: var(--main-red);
+    border: 2px solid var(--main-red); 
+}

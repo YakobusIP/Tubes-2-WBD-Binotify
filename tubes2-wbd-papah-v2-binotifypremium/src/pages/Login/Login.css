@@ -1,0 +1,28 @@
+.label{
+    padding-bottom: 0.5vw;
+    margin-right:14.3vw;
+    font-weight: 600;
+}
+
+.label-pass{
+    padding-bottom: 0.5vw;
+    margin-right:22.3vw;
+    font-weight: 600;
+}
+
+.signup{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color:grey;
+    border:1px solid;
+    border-radius:500px;
+    width: 25vw;
+    height: 3vw;
+    font-weight: 700;
+}
+
+.signup:hover{
+    border:1px solid black;
+}

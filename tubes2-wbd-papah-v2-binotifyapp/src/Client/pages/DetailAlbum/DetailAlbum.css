@@ -1,0 +1,150 @@
+body {
+    background-color: var(--main-black);
+}
+
+#detail_album_section{
+    /* margin-top: 25px; */
+}
+
+.album-field {
+    padding: 2% 10%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(46,50,57,1) 11%, rgba(92,180,116,1) 41%, rgba(241,223,112,1) 100%);
+}
+
+.album-cover {
+    display: flex;
+    width: 23%;
+    height: 230px;
+}
+
+.album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.album-info {
+    width: 75%;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+}
+
+.album-info h1 {
+    font-size: 52px;
+}
+
+.album-info h3 {
+    font-size: 22px;
+}
+
+.album-info * {
+    margin: 0;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.info-item * {
+    margin: 0;
+}
+
+.dot {
+    margin: 0 9px;
+}
+
+.song-list {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.song-list hr {
+    width: 75%;
+}
+
+.song-header {
+    width: 75%;
+    display: flex;
+}
+
+.song-item {
+    width: 75%;
+    display: flex;
+    transition: 0.5s ease;
+}
+
+.song-item:hover {
+    cursor: pointer;
+    /* background-color: rgb(120, 120, 120); */
+    color: var(--main-black);
+    background-color: var(--main-green);
+    border-radius: 10px;
+}
+
+.item-1 {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.item-2 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-2 * {
+    margin: 0;
+}
+
+.item-3 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+#pagination {
+    margin: 3vh 0;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    color: white;    
+}
+
+.prev {
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.5s ease;
+}
+
+.next {
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.5s ease;
+}
+
+.prev:hover {
+    color: var(--main-black);
+    background-color: var(--main-green);
+    border-radius: 8px;
+}
+
+.next:hover {
+    color: var(--main-black);
+    background-color: var(--main-green);
+    border-radius: 8px;
+}

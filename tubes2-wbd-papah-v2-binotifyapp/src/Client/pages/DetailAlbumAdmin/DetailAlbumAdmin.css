@@ -1,0 +1,346 @@
+#detail_album_section{
+    /* margin-top: 25px; */
+}
+
+.album-field {
+    padding: 2% 10%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(46,50,57,1) 11%, rgba(92,180,116,1) 41%, rgba(241,223,112,1) 100%);
+}
+
+.album-cover {
+    display: flex;
+    filter: blur(0);
+    width: 23%;
+    height: 230px;
+}
+
+.album-cover img {
+    filter: blur(0);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.album-info {
+    width: 70%;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+}
+
+.album-info h1 {
+    font-size: 52px;
+}
+
+.album-info h3 {
+    font-size: 22px;
+}
+
+.album-info h1 {
+    margin: 0;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.info-item * {
+    margin: 0;
+}
+
+.dot {
+    margin: 0 9px;
+}
+
+.icon-action {
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+}
+
+.action-item {
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.action-item:hover {
+    color: var(--main-black);
+    border-radius: 5px;
+}
+
+.action-1:hover {
+    background-color: rgb(240, 156, 0);
+}
+
+.action-2:hover {
+    background-color: rgb(226, 0, 0);
+}
+
+.action-3:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.action-item * {
+    width: 40px;
+}
+
+.song-list {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.song-list hr {
+    width: 75%;
+}
+
+.song-header {
+    width: 75%;
+    display: flex;
+}
+
+.song-item {
+    width: 75%;
+    display: flex;
+    transition: 0.5s ease;
+}
+
+.song-item:hover {
+    cursor: pointer;
+    /* background-color: rgb(120, 120, 120); */
+    color: var(--main-black);
+    background-color: var(--main-green);
+    border-radius: 10px;
+}
+
+.item-1 {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.item-2 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-2 * {
+    margin: 0;
+}
+
+.item-3 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.edit-modal-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+}
+
+.edit-modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.edit-modal {
+    padding: 30px 50px;
+    width: 600px;
+    max-width: 100%;
+    text-align: center;
+    color: white;
+    background-color: var(--main-black);
+    outline: 2px solid var(--main-green);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.edit-modal .modal-content {
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-item {
+    display: flex;
+    align-items: center;
+    padding: 1% 0;
+    width: 100%;
+}
+
+.form-label {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2%;
+    width: 38%;
+}
+
+.form-label h3 {
+    margin: 0;
+}
+
+.form-input {
+    display: flex;
+    margin-left: 2%;
+    width: 58%;
+}
+.form-input input {
+    font-family: 'Rubik';
+    padding: 0 8px;
+    display: flex;
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+.form-input input:focus {
+    outline: 2px solid var(--main-green);
+    color: var(--main-green);
+    background-color: var(--main-black);
+}
+
+#editPenyanyi {
+    cursor: not-allowed;
+    color: rgb(58, 58, 58);
+    background-color: rgb(164, 164, 164);
+}
+
+#editCover {
+    padding-top: 4px;
+    padding-left: 0;
+}
+
+.edit-modal .choice {
+    display: flex;
+    justify-content: center;
+}
+
+#editSaveBtn {
+    width: 30%;
+    padding: 10px 25px;
+    margin-right: 5%;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--main-green);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+}
+
+#editSaveBtn:hover {
+    width: 40%;
+}
+
+#editCancelBtn {
+    width: 30%;
+    padding: 10px 25px;
+    margin-left: 5%;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(226, 0, 0);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+}
+
+#editCancelBtn:hover {
+    width: 40%;
+}
+
+.delete-modal-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+}
+
+.delete-modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.delete-modal {
+    padding: 30px 50px;
+    width: 600px;
+    max-width: 100%;
+    text-align: center;
+    color: white;
+    background-color: var(--main-black);
+    outline: 2px solid var(--main-green);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.delete-modal .choice {
+    display: flex;
+    justify-content: center;
+}
+
+#deleteYesBtn {
+    width: 30%;
+    padding: 10px 25px;
+    margin-right: 5%;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--main-green);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+}
+
+#deleteYesBtn:hover {
+    width: 40%;
+}
+
+#deleteCancelBtn {
+    width: 30%;
+    padding: 10px 25px;
+    margin-left: 5%;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(226, 0, 0);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+}
+
+#deleteCancelBtn:hover {
+    width: 40%;
+}

@@ -1,0 +1,92 @@
+.header {
+    display: flex;
+    justify-content: center;
+    font-size: x-large;
+    color: white;
+}
+
+.album-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.album-list hr {
+    width: 75%;
+}
+
+.album-header {
+    width: 75%;
+    display: flex;
+}
+
+.album-item {
+    width: 75%;
+    display: flex;
+    transition: 0.5s ease;
+}
+
+.album-item:hover {
+    cursor: pointer;
+    /* background-color: rgb(120, 120, 120); */
+    color: var(--main-black);
+    background-color: var(--main-green);
+    border-radius: 10px;
+}
+
+.item-1 {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.item-2 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-2 * {
+    margin: 0;
+}
+
+.item-3 {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+#pagination {
+    margin: 3vh 0;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    color: white;    
+}
+
+.prev {
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.5s ease;
+}
+
+.next {
+    cursor: pointer;
+    margin-left: 10px;
+    transition: 0.5s ease;
+}
+
+.prev:hover {
+    color: var(--main-black);
+    background-color: var(--main-green);
+    border-radius: 8px;
+}
+
+.next:hover {
+    color: var(--main-black);
+    background-color: var(--main-green);
+    border-radius: 8px;
+}

@@ -1,0 +1,119 @@
+#search_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#search_body h1 {
+    margin: 0;
+    font-size: 2vw;
+    color: white;
+    text-align: center;
+    padding: 4vh 0 4vh 0;
+}
+
+#genre_option {
+    font-family: inherit;
+    padding: 1vw;
+    border-radius: 9999px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    margin: 4vh 0 4vh 0;
+}
+
+#result_div {
+    width: 70vw;
+}
+
+#result_table {
+    width: 100%;
+    color: white;
+    border-collapse: collapse;
+}
+
+#result_table tr {
+    border-bottom: 1px solid white;  
+    transition: 100ms ease-in;  
+    
+}
+
+#result_table tr:hover td {
+    background-color: #535353;
+    cursor: pointer;
+}
+
+#result_table td, th {
+    padding: 2vh 0 2vh 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+#result_table td div {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2vw;
+}
+
+#result_table td div div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#result_table td div div p {
+    margin: 0;
+    text-align: left;
+}
+
+#result_table td div img {
+    width: 3vw;
+    height: 3vw;
+    align-items: center;
+    place-self: center;
+}
+
+#pagination {
+    display: flex;
+    flex-direction: row;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+
+#pagination svg {
+    color: white;
+    width: 2vw;
+    height: 2vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    cursor: pointer;
+    box-sizing: unset;
+}
+
+#pagination svg:hover {
+    color: #1ed760;
+}
+
+.right-item {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+.logout-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 31%;
+    font-weight: bold;
+    color: black;
+    background-color: rgb(226, 0, 0);
+    border-radius: 6px;
+    transition: 0.5s ease;
+}
+
+.logout-btn:hover {
+    width: 37%;
+}

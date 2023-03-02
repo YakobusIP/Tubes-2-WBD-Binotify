@@ -1,0 +1,109 @@
+body{
+    font-family: 'Rubik';
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15vw;
+}
+
+h1 {
+    border-bottom:1px solid #CCC;
+    padding-bottom: 1.5vw;
+}
+
+form{
+    flex: auto;
+}
+
+.email-username-group{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    padding-bottom: 1.5vw;
+}
+
+.email-username{
+    font-weight:700;
+    align-items: left;
+    margin-right: 370px;
+    padding-bottom:6px;
+}
+
+.label{
+    padding-bottom: 0.5vw;
+    margin-right:14.3vw;
+    font-weight: 600;
+}
+
+.label-pass{
+    padding-bottom: 0.5vw;
+    margin-right:22.3vw;
+    font-weight: 600;
+}
+
+input{
+    width: 25vw;
+    height: 2.5vw;
+    border-radius: 1px;
+    transition-duration: 0.2s;
+    padding-left:1vw;
+}
+
+input:hover{
+    border-radius: 1px black;
+}
+
+input::placeholder{
+    font-size: larger;
+}
+
+.login{
+    display: block;
+    background-color: #1ed760;
+    font-size: 16px;
+    border:0px;
+    border-radius:500px;
+    position: relative;
+    font-weight: 700;
+    align-self: center;
+    width: 7vw;
+    height: 3vw;
+    margin-left: 55vw;
+    margin-bottom: 1.5vw;
+    transition-duration: 0.2s;
+}
+
+.login:hover{
+    transform: scale(1.05) perspective(1px);
+    background-color: #1fdf64;
+}
+
+hr{
+    width:25.5vw
+}
+
+p{
+    text-align: center;
+    font-weight: 600;
+}
+
+.signup{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    color:grey;
+    border:1px solid;
+    border-radius:500px;
+    width: 25vw;
+    height: 3vw;
+    font-weight: 700;
+}
+
+.signup:hover{
+    border:1px solid black;
+}

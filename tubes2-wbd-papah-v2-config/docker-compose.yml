@@ -1,0 +1,126 @@
+version: '3.9'
+services:
+  # REST API
+  bnmo-rest-db:
+    container_name: bnmo-rest-db
+    image: postgres:15.0-alpine
+    volumes:
+      - bnmo-rest-db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${POSTGRES_REST_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_REST_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_REST_DB}
+    restart: always
+    ports:
+      - 5432:5432
+
+  bnmo-rest-redis:
+    container_name: bnmo-rest-redis
+    image: redis:alpine
+    command: redis-server /usr/local/etc/redis/redis.conf
+    ports:
+      - 6379:6379
+    volumes:
+      - /redis.conf:/usr/local/etc/redis/redis.conf
+
+  bnmo-rest-web:
+    container_name: bnmo-rest-web
+    depends_on:
+      - bnmo-rest-db
+      - bnmo-rest-redis
+    build:
+      context: ../tubes2-wbd-papah-v2-rest
+      dockerfile: Dockerfile
+    volumes:
+      - ../tubes2-wbd-papah-v2-rest/:/usr/app
+    environment:
+      POSTGRES_HOST: ${POSTGRES_REST_HOST}
+      POSTGRES_USER: ${POSTGRES_REST_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_REST_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_REST_DB}
+      REST_API_KEY: ${REST_API_KEY}
+    expose:
+      - "4000"
+    ports:
+      - 4000:4000
+
+  # SOAP WEBSERVICE
+  bnmo-soap-db:
+    container_name: bnmo-soap-db
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: ${MYSQL_SOAP_DATABASE}
+      MYSQL_USER: ${MYSQL_SOAP_USER}
+      MYSQL_PASSWORD: ${MYSQL_SOAP_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_SOAP_ROOT_PASSWORD}
+    ports:
+      - 3307:3306
+    expose:
+      - "3306"
+    volumes:
+      - bnmo-soap-db:/var/lib/mysql
+      - ../tubes2-wbd-papah-v2-soap/database:/docker-entrypoint-initdb.d
+
+  bnmo-soap-web:
+    container_name: bnmo-soap-web
+    depends_on:
+      - bnmo-soap-db
+    ports:
+    - 7000:7000
+    environment:
+      WAIT_HOSTS: bnmo-soap-db:3306
+    build:
+      context: ../tubes2-wbd-papah-v2-soap/
+      dockerfile: Dockerfile
+  
+  # BINOTIFY APP (PHP)
+  bnmo-php-db:
+    container_name: bnmo-php-db
+    image: postgres:15.0-alpine
+    volumes:
+      - bnmo-php-db:/var/lib/postgresql/data
+      - ../tubes2-wbd-papah-v2-binotifyapp/database:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_USER: ${POSTGRES_PHP_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PHP_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_PHP_DB}
+    restart: always
+    ports:
+      - 5433:5433
+    command: -p 5433
+
+  bnmo-php-web:
+    container_name: bnmo-php-web
+    depends_on:
+      - bnmo-php-db
+    volumes:
+      - ../tubes2-wbd-papah-v2-binotifyapp/src:/var/www/html/
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_USER: ${POSTGRES_PHP_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PHP_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_PHP_DB}
+      BAPP_API_KEY: ${BAPP_API_KEY}
+    build: 
+      context: ../tubes2-wbd-papah-v2-binotifyapp
+      dockerfile: Dockerfile
+    ports:
+      - 8080:80
+    
+  # BINOTIFY PREMIUM (REACT)
+  bnmo-react-web:
+    container_name: bnmo-react-web
+    volumes:
+      - ../tubes2-wbd-papah-v2-binotifypremium/src:/react-vite-app/src
+      - ../tubes2-wbd-papah-v2-binotifypremium/public:/react-vite-app/public
+    build:
+      context: ../tubes2-wbd-papah-v2-binotifypremium
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+
+volumes:
+  bnmo-rest-db:
+  bnmo-soap-db:
+  bnmo-php-db:

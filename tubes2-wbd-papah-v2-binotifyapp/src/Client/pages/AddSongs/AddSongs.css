@@ -1,0 +1,123 @@
+/* Add songs section */
+#add_song_section {
+    margin-top: 25px;
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content hr {
+    width: 65%;
+}
+
+.header {
+    font-size: 56px;
+    margin: 0;
+}
+
+.form-container {
+    width: 90%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: teal; */
+}
+
+.form-item {
+    display: flex;
+    align-items: center;
+    padding: 1% 0;
+    width: 100%;
+}
+
+.form-label {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1%;
+    width: 38%;
+    /* background-color: grey; */
+}
+
+.form-label h2 {
+    margin: 0;
+}
+
+.form-select {
+    font-family: 'Rubik';
+    font-size: 16px;
+    padding: 0 12px;
+    display: flex;
+    margin-left: 1%;
+    width: 36%;
+    height: 35px;
+    border-radius: 6px;
+    transition: 0.5s ease;
+}
+
+.form-select:focus {
+    outline: 3px solid #1ed760;
+    color: #1ed760;
+    background-color: #191414;
+}
+
+.form-input {
+    display: flex;
+    margin-left: 1%;
+    width: 45%;
+    /* background-color: brown; */
+}
+.form-input input {
+    font-family: 'Rubik';
+    font-size: 16px;
+    padding: 0 12px;
+    display: flex;
+    width: 80%;
+    height: 35px;
+    border-radius: 6px;
+    transition: 0.5s ease;
+}
+
+.form-input input:focus {
+    outline: 3px solid #1ed760;
+    color: #1ed760;
+    background-color: #191414;
+}
+
+#new_image {
+    padding-top: 5px;
+    padding-left: 0;
+}
+
+#new_audio {
+    padding-top: 5px;
+    padding-left: 0;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#add_song {
+    width: 55%;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #1ed760;
+    border-radius: 7px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+}
+
+#add_song:hover {
+    width: 65%;
+}

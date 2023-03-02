@@ -1,0 +1,86 @@
+.header {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: x-large;
+}
+
+.singer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.singer-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    padding: 0 2vw;
+}
+
+.singer-item:hover {
+    border-radius: 6px;
+    background-color: #1ed760;
+}
+
+.singer-item h3 {
+    color: white;
+    cursor: default;
+    margin: 0.5vh;
+}
+
+.singer-item h4 {
+    color: white;
+    cursor: default;
+    margin: 0.5vh;
+}
+
+.singer-subscribe {
+    cursor: pointer;
+    width: 30%;
+    height: fit-content;
+    padding: 1vh;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(226, 0, 0);
+    border-radius: 6px;
+    border-color: rgb(226, 0, 0);
+    transition: 0.5s ease;
+    font-size: large;
+}
+
+.awaiting {
+    width: 30%;
+    text-align: center;
+    cursor: default;
+    font-weight: 700;
+    color: white;
+    font-size: large;
+}
+
+.singer-subscribe:hover {
+    width: 40%;
+}
+
+.singer-subscribe-show {
+    display: flex;
+}
+
+.singer-subscribe-hide {
+    display: none;
+}
+
+hr {
+    width: 60%;
+}
+
+.no-premium {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}

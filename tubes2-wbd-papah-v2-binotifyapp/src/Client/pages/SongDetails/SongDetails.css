@@ -1,0 +1,403 @@
+/* This is for the song details and image */
+#song_details {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: auto;
+    padding: 2vw 0 2vw 2vw;
+    color: white;
+    align-items: flex-end;
+    background: linear-gradient(90deg, rgba(46,50,57,1) 11%, rgba(92,180,116,1) 41%, rgba(241,223,112,1) 100%);
+}
+
+#song_image_container {
+    width: 15vw;
+    margin: 0;
+}
+
+#song_image {
+    width: 100%;
+}
+
+#song_info {
+    padding-left: 3vw;
+    height: auto;
+}
+
+#album_genre {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    font-size: 1vw;
+    align-items: center;
+}
+
+#album_genre h1 {
+    padding-left: 1vw;
+    padding-bottom: 1vh;
+    margin:0;
+}
+
+#album {
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    color: white;
+}
+
+#genre {
+    padding-left: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    cursor: default;
+}
+
+#album_genre svg {
+    margin-left: 2vw;
+    align-content: flex-start;
+    width: 2vw;
+    height: 2vw;
+    cursor: pointer;
+    transition: ease-in;
+    transition-duration: 100ms;
+}
+
+#album_genre svg:hover {
+    color: #1ed760;
+}
+
+#song_title {
+    margin: 0;
+    font-size: 4vw;
+    cursor: default;
+}
+
+#song_metadata {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#song_metadata p {
+    padding-right: 1vw;
+    margin: 0;
+}
+
+#song_metadata h1 {
+    padding-right: 1vw;
+    padding-bottom: 1vh;
+    margin:0;
+}
+
+/* This is for the playbar */
+#playbar {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: 70vw;
+    justify-content: space-between;
+    padding-top: 2vw;
+}
+
+#play_button {
+    margin-bottom: 2vh;
+    height: 2vw;
+    width: 2vw;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #1ed760;
+    padding: 1vw;
+    cursor: pointer;
+    transition: ease-in;
+    transition-duration: 100ms;
+    color: black;
+    border: 2px #1ed760 solid;
+}
+
+#play_button:hover {
+    color: white;
+    border: 2px #1ed760 solid;
+}
+
+#play_button svg {
+    width: 2vw;
+    height: 2vw;
+}
+
+#audio_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+}
+
+#song_timeline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#song_timeline input {
+    width: 40vw;
+}
+
+#song_timeline span {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5vw;
+}
+
+#dots {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5vw;
+}
+
+#end_duration {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+#cur_seconds {
+    padding-right: 2vw;
+}
+
+#audio_control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#mute_button {
+    width: 2vw;
+    height: 2vw;
+    padding-right: 1vw;
+    color: #b3b3b3;
+}
+
+#mute_button:hover {
+    color: white
+}
+
+/* Modal section */
+.edit-modal-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+}
+
+.edit-modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.edit-modal {
+    padding: 30px 50px;
+    width: 600px;
+    max-width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #191414;
+    outline: 2px solid #1ed760;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.edit-modal .modal-content {
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-item {
+    display: flex;
+    align-items: center;
+    padding: 1% 0;
+    width: 100%;
+}
+
+.form-label {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2%;
+    width: 38%;
+}
+
+.form-label h3 {
+    margin: 0;
+}
+
+.form-select {
+    font-family: 'Rubik';
+    padding: 0 8px;
+    display: flex;
+    margin-left: 2%;
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+.form-select:focus {
+    outline: 2px solid #1ed760;
+    color: #1ed760;
+    background-color: #191414;
+}
+
+.form-input {
+    display: flex;
+    margin-left: 2%;
+    width: 58%;
+}
+.form-input input {
+    font-family: 'Rubik';
+    padding: 0 8px;
+    display: flex;
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+.form-input input:focus {
+    outline: 2px solid #1ed760;
+    color: #1ed760;
+    background-color: #191414;
+}
+
+#new_singer {
+    cursor: not-allowed;
+    color: rgb(58, 58, 58);
+    background-color: rgb(164, 164, 164);
+}
+
+#editCover {
+    padding-top: 4px;
+    padding-left: 0;
+}
+
+#editAudio {
+    padding-top: 4px;
+    padding-left: 0;
+}
+
+.edit-modal .choice {
+    display: flex;
+    justify-content: center;
+}
+
+#editSaveBtn {
+    width: 30%;
+    padding: 10px 25px;
+    margin-right: 5%;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #1ed760;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px #1ed760;
+    transition: 0.5s ease;
+}
+
+#editSaveBtn:hover {
+    width: 40%;
+}
+
+#editCancelBtn {
+    width: 30%;
+    padding: 10px 25px;
+    margin-left: 5%;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(226, 0, 0);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+}
+
+#editCancelBtn:hover {
+    width: 40%;
+}
+
+.delete-modal-container {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    transition: opacity 0.3s ease;
+}
+
+.delete-modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.delete-modal {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 2vw 4vw;
+    width: 30vw;
+    max-width: 100%;
+    text-align: center;
+}
+
+.delete-modal .choice {
+    display: flex;
+    justify-content: center;
+}
+
+#deleteYesBtn {
+    width: 30%;
+    padding: 1vw 3vw;
+    margin-right: 5%;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #1ed760;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+}
+
+#deleteYesBtn:hover {
+    width: 40%;
+}
+
+#deleteCancelBtn {
+    width: 30%;
+    padding: 1vw 3vw;
+    margin-left: 5%;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(226, 0, 0);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.5s ease;
+}
+
+#deleteCancelBtn:hover {
+    width: 40%;
+}

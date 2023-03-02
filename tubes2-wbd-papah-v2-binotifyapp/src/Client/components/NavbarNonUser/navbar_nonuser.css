@@ -1,0 +1,146 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    background-color: #191414;
+}
+
+*:focus {
+    outline: none;
+}
+
+#split_page {
+    display: flex;
+    flex-direction: row;
+    /* width: 100vw; */
+    margin-left: 17vw;
+    max-width: 100vw;
+}
+
+#side_navbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: black;
+    padding-right: 4vw;
+    /* z-index: 1; */
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#home_logo {
+    width: 11vw;
+}
+
+#side_navbar a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1vw;
+    text-decoration: none;
+    color: #b3b3b3;
+    width: max-content;
+    padding: 3vh 0 1vh 2vw;
+}
+
+#side_navbar * {
+    box-sizing: content-box;
+}
+
+#side_navbar a:hover {
+    color: white;
+}
+
+#side_navbar a.active {
+    color: white;
+}
+
+#side_navbar a svg {
+    width: 2vw;
+    height: 2vw;
+    padding-right: 1vw;
+}
+
+#side_navbar a p {
+    margin: 0;
+}
+
+#main_body {
+    width: 100%;
+}
+
+#top_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1vh 2vw 1vh 2vw;
+    box-sizing: border-box;
+}
+
+#top_bar * {
+    box-sizing: content-box;
+}
+
+#search_div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 9999px;
+}
+
+#search_div svg {
+    width: 2vw;
+    height: 2vw;
+    padding: 1vh;
+}
+
+#search_div input {
+    appearance: none;
+    width: 20vw;
+    padding: 1vh 1vh 1vh 0;
+    border: none;
+    margin: 1vh;
+}
+
+#signup_button {
+    appearance: none;
+    background-color: inherit;
+    margin-right: 1vw;
+    cursor: pointer;
+    border: none;
+}
+
+#signup_button p {
+    margin: 0;
+    font-weight: bold;
+    color: #b3b3b3;
+    font-size: 1.1vw;
+}
+
+#signup_button p:hover {
+    color: white;
+}
+
+#login_button {
+    appearance: none;
+    background-color: white;
+    border-radius: 9999px;
+    padding: 1vw 2vw; 
+    cursor: pointer;
+    border: 2px black solid;
+}
+
+#login_button p {
+    margin: 0;
+    font-weight: bold;
+    color: black;
+    font-size: 1.1vw;
+}
+
+#login_button:hover {
+    border: 2px white solid;
+}

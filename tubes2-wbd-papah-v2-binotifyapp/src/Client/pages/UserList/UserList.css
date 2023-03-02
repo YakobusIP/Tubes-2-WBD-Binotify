@@ -1,0 +1,39 @@
+#user_list {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#user_list h1 {
+    margin: 0;
+    font-size: 2vw;
+    color: white;
+    text-align: center;
+    padding: 4vh 0 4vh 0;
+}
+
+#user_div {
+    width: 70vw;
+}
+
+#user_table {
+    width: 100%;
+    color: white;
+    border-collapse: collapse;
+}
+
+#user_table tr {
+    border-bottom: 1px solid white;  
+    transition: 100ms ease-in;  
+}
+
+#user_table tr:hover td {
+    background-color: #535353;
+}
+
+#user_table td, th {
+    padding: 2vh 0 2vh 0;
+    text-align: center;
+    cursor: default;
+}

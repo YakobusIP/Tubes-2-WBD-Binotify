@@ -1,0 +1,13 @@
+:root {
+    --main-black: #191414;
+    --main-green: #1ED760;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Rubik';
+}

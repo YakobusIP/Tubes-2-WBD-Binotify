@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main-green: #1ED760;
+  --main-black-1: #535353;
+  --main-black-2: #191414;
+  --main-black-3: #212121;
+  --main-red: #E20000;
+}
+
+.green-btn {
+  @apply flex rounded-md font-main cursor-pointer font-bold items-center justify-center p-2 bg-white hover:bg-main-green;
+}
+
+.modal-green-btn {
+  @apply rounded-md font-main cursor-pointer font-bold items-center justify-center text-center p-2 my-2 mr-4 bg-main-green hover:bg-main-green;
+}
+
+.modal-red-btn {
+  @apply rounded-md font-main cursor-pointer font-bold items-center justify-center text-center p-2 my-2 ml-4 bg-main-red hover:bg-main-red;
+}
+
+.login-register-input {
+  @apply w-full py-3 border duration-200 pl-2 hover:border hover:border-black focus:border-2 focus:indent-2;
+}
+
+.login-register-button {
+  @apply bg-main-green border-0 px-14 py-4 rounded-full font-bold items-center duration-200 hover:scale-105 hover:bg-green-400 hover:border hover:border-black;
+}
+
+.label-input-group {
+  @apply flex flex-col w-1/2 text-left font-medium;
+}
